@@ -1,0 +1,273 @@
+.pageContainer {
+    width: 80%;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.header {
+    padding-top: 40px;
+}
+
+.headerTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.headerTopLogo {
+    margin-right: 30px;
+}
+
+.headerTopDescription {
+    display: flex;
+    align-items: flex-end;
+}
+
+.headerTopDescriptionText {
+    font-size: 18px;
+    line-height: 25px;
+    width: 270px;
+}
+
+.headerBottom {
+    padding-top: 40px;
+}
+
+.headerNavigation ul {
+    display: flex;
+    list-style: none;
+    padding-inline-start: 0;
+}
+
+.headerNavigation li:not(:last-child) {
+    margin-right: 70px;
+}
+
+.headerNavigation a:hover {
+    transition: .5s;
+    color: #0080C4;
+}
+
+.headerNavigation a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #282728;
+    font-size: 16px;
+    font-weight: 400;
+    transition: 2s;
+}
+
+.headerTopLocation {
+    display: flex;
+    cursor: pointer;
+    transition: 2s;
+}
+
+.headerTopLocation:hover {
+    color: #FD574F;
+    transition: .5s;
+}
+.headerTopLocationMap {
+    margin-right: 18px;
+    width: 70px;
+    height: 70px;
+    border: 1px solid #cecece;
+    border-radius: 50%;
+    background:
+        url("../../assets/label_location.png") center no-repeat,
+        url("../../assets/mini_map_bg.png") center;
+
+}
+
+.headerTopButton {
+    align-self: center;
+}
+
+.headerTopButton button {
+    width: 240px;
+    height: 75px;
+    color: white;
+    font-size: 16px;
+    background-color: #313D4B;
+    border: 0;
+    border-top: 5px solid transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.headerTopButton button:hover {
+    border-color: #576b83;
+    box-shadow: 2px 0 20px 5px #c7c6c7;
+    transition: .5s;
+}
+
+.headerTopContactsNumber a {
+    text-decoration: none;
+    color: #282728;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.headerTopContactsNumber img {
+    margin-right: 5px;
+}
+
+.headerTopContactsNumber span {
+    transition: .5s;
+}
+
+.headerTopContactsNumber span:hover {
+    color: #257CBD;
+    transition: .5s;
+}
+
+.headerTopContactsSocial {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 12px;
+}
+
+.headerTopContactsSocialViber {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #7460F3;
+    background-image: url("../../assets/viber_icon.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: .5s;
+}
+
+.headerTopContactsSocialTelegram {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #00A2F2;
+    background-image: url("../../assets/telegram_icon .png");
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: .5s;
+}
+
+.headerTopContactsSocialWathsApp {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #25D266;
+    background-image: url("../../assets/wathsApp_icon.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: .5s;
+}
+
+.headerTopContactsSocialViber:hover,
+.headerTopContactsSocialTelegram:hover,
+.headerTopContactsSocialWathsApp:hover {
+    transform: scale(1.1);
+    transition: .5s;
+}
+
+.mainHeader {
+    margin-top: 90px;
+    max-width: 850px;
+    font-size: 60px;
+    color: #282728;
+}
+
+.mainDescription,
+.mainDescriptionItem{
+    display: flex;
+}
+
+.mainDescription {
+    margin-top: 70px;
+}
+
+.mainDescriptionItem {
+    max-width: 330px;
+    margin-right: 40px;
+    font-size: 20px;
+    color: #282728;
+}
+
+.mainDescriptionItem:not(:first-child) {
+    max-width: 220px;
+}
+
+.mainDescriptionItem:first-child {
+    align-items: flex-start;
+}
+
+.mainDescriptionItem span {
+    display: block;
+    font-weight: bold;
+}
+
+.mainDescriptionItemYear {
+    align-self: flex-start;
+    font-size: 78px;
+    line-height: .9;
+    color: #282728;
+    padding-right: 5px;
+}
+
+.mainAboutAll {
+    margin-top: 60px;
+    display: flex;
+}
+
+.mainAboutCalc {
+    max-width: 450px;
+}
+
+.mainAboutCalc img {
+    padding-left: 30px;
+    padding-right: 5px;
+    display: block;
+}
+
+.mainAboutCalc span {
+    border-radius: 5px;
+    background-color: #ffffff;
+    padding: 2px;
+    font-weight: bold;
+}
+
+.mainAboutCalc p {
+    font-size: 18px;
+    line-height: 1.5;
+    padding: 0 20px;
+}
+
+.mainAboutCalc button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    border: 0;
+    border-bottom: 5px solid #ff352c;
+    border-top: 5px transparent;
+    background: linear-gradient(to bottom, #FE7C55, #FE5C55);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.mainAboutCalc button:hover {
+    border-color: #FE5C55;
+    box-shadow: 2px 0 20px 5px #c7c6c7;
+    transition: .5s;
+}
+
+.mainAboutCalcTextButton {
+    text-transform: uppercase;
+    font-size: 16px;
+    text-align: start;
+    color: white;
+    padding-right: 20px;
+}
+
+.mainAboutLicense {
+    margin-left: 70px;
+}
