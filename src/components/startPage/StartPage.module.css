@@ -1,11 +1,13 @@
+@import "../../index.css";
+
 .pageContainer {
-    width: 80%;
+    max-width: 80vw;
     margin: 0 auto;
     box-sizing: border-box;
 }
 
 .header {
-    padding-top: 40px;
+    padding-top: 2vw;
 }
 
 .headerTop {
@@ -15,46 +17,24 @@
 }
 
 .headerTopLogo {
-    margin-right: 30px;
+    margin-right: 1.8vw;
+}
+
+.headerTopLogoImg {
+    width: 9.5vw;
 }
 
 .headerTopDescription {
     display: flex;
     align-items: flex-end;
 }
-
 .headerTopDescriptionText {
-    font-size: 18px;
-    line-height: 25px;
-    width: 270px;
-}
-
-.headerBottom {
-    padding-top: 40px;
-}
-
-.headerNavigation ul {
-    display: flex;
-    list-style: none;
-    padding-inline-start: 0;
-}
-
-.headerNavigation li:not(:last-child) {
-    margin-right: 70px;
-}
-
-.headerNavigation a:hover {
-    transition: .5s;
-    color: #0080C4;
-}
-
-.headerNavigation a {
-    text-decoration: none;
-    text-transform: uppercase;
+    font-family: 'UniNeueRegular';
+    font-size: 0.94vw;
+    line-height: 1.4vw;
+    letter-spacing: 0.025em;
     color: #282728;
-    font-size: 16px;
-    font-weight: 400;
-    transition: 2s;
+    max-width: 14vw;
 }
 
 .headerTopLocation {
@@ -68,49 +48,75 @@
     transition: .5s;
 }
 .headerTopLocationMap {
-    margin-right: 18px;
-    width: 70px;
-    height: 70px;
-    border: 1px solid #cecece;
-    border-radius: 50%;
+    margin-right: 1vw;
+    width: 4vw;
+    height: 4vw;
+    border: 0.05vw solid #d9d9d9;
+    border-radius: 2vw;
     background:
-        url("../../assets/label_location.png") center no-repeat,
-        url("../../assets/mini_map_bg.png") center;
-
+            url("../../assets/label_location.png") center / 1vw no-repeat,
+            url("../../assets/mini_map_bg.png") center / 4vw;
 }
 
-.headerTopButton {
-    align-self: center;
+.headerTopLocationAddress p {
+    font-family: 'UniNeueRegular';
+    font-size: 0.83vw;
+    line-height: 1.1vw;
+    letter-spacing: 0.025em;
+}
+
+.headerTopButton button::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: -4vw;
+    width: 1.6vw;
+    height: 100%;
+    background-color: white;
+    filter: blur(0.25vw);
+    transform: skewX(-45deg);
+    z-index: 2;
+    animation: blick 4s ease-in-out infinite;
 }
 
 .headerTopButton button {
-    width: 240px;
-    height: 75px;
+    max-width: 12.8vw;
+    padding: 1vw;
+    max-height: 4vw;
+    height: 3.7vw;
     color: white;
-    font-size: 16px;
+    font-family: 'UniNeueBold';
+    font-size: 0.85vw;
+    line-height: 1.2;
+    letter-spacing: 0.01em;
     background-color: #313D4B;
     border: 0;
-    border-top: 5px solid transparent;
-    border-radius: 5px;
+    border-top: 0.2vw solid transparent;
+    border-radius: 0.3vw;
     cursor: pointer;
     transition: .5s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
 }
 
 .headerTopButton button:hover {
     border-color: #576b83;
-    box-shadow: 2px 0 20px 5px #c7c6c7;
+    box-shadow: 0.25vw 0 1vw 0.3vw #c7c6c7;
     transition: .5s;
 }
 
 .headerTopContactsNumber a {
     text-decoration: none;
     color: #282728;
-    font-size: 22px;
-    font-weight: bold;
+    font-family: 'UniNeueHeavy';
+    font-size: 1.15vw;
+    line-height: 1.15vw;
 }
 
 .headerTopContactsNumber img {
-    margin-right: 5px;
+    width: 0.9vw;
+    margin-right: 0.4vw;
 }
 
 .headerTopContactsNumber span {
@@ -125,37 +131,40 @@
 .headerTopContactsSocial {
     display: flex;
     justify-content: space-evenly;
-    margin-top: 12px;
+    margin-top: 0.5vw;
 }
 
 .headerTopContactsSocialViber {
-    width: 50px;
-    height: 50px;
+    width: 2.6vw;
+    height: 2.6vw;
     border-radius: 50%;
     background-color: #7460F3;
     background-image: url("../../assets/viber_icon.png");
+    background-size: 1.1vw;
     background-repeat: no-repeat;
     background-position: center;
     transition: .5s;
 }
 
 .headerTopContactsSocialTelegram {
-    width: 50px;
-    height: 50px;
+    width: 2.6vw;
+    height: 2.6vw;
     border-radius: 50%;
     background-color: #00A2F2;
     background-image: url("../../assets/telegram_icon .png");
+    background-size: 1.1vw;
     background-repeat: no-repeat;
     background-position: center;
     transition: .5s;
 }
 
 .headerTopContactsSocialWathsApp {
-    width: 50px;
-    height: 50px;
+    width: 2.6vw;
+    height: 2.6vw;
     border-radius: 50%;
     background-color: #25D266;
     background-image: url("../../assets/wathsApp_icon.png");
+    background-size: 1.1vw;
     background-repeat: no-repeat;
     background-position: center;
     transition: .5s;
@@ -168,106 +177,294 @@
     transition: .5s;
 }
 
-.mainHeader {
-    margin-top: 90px;
-    max-width: 850px;
-    font-size: 60px;
-    color: #282728;
+.headerBottom {
+    padding-top: 2vw;
 }
 
+@media (max-width: 900px) {
+    .headerBottom {
+        visibility: hidden;
+    }
+}
+
+.headerNavigation ul {
+    display: flex;
+    list-style: none;
+    padding-inline-start: 0;
+}
+
+.headerNavigation li:not(:last-child) {
+    margin-right: 3vw;
+}
+
+.headerNavigation a:hover {
+    transition: .5s;
+    color: #0080C4;
+}
+
+.headerNavigation a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #282728;
+    font-family: 'UniNeueBold';
+    font-size: 0.8vw;
+    letter-spacing: 0.05em;
+    transition: 2s;
+}
+
+.mainHeader {
+    margin-top: 4vw;
+    max-width: 42vw;
+    font-family: 'UniNeueBook';
+    font-size: 3.1vw;
+    line-height: 3.5vw;
+    color: #282728;
+}
 .mainDescription,
 .mainDescriptionItem{
     display: flex;
 }
 
 .mainDescription {
-    margin-top: 70px;
+    margin-top: 3vw;
+    margin-left: 0.8vw;
 }
 
 .mainDescriptionItem {
-    max-width: 330px;
-    margin-right: 40px;
-    font-size: 20px;
+    max-width: 17vw;
+    margin-right: 3vw;
+    font-family: 'UniNeueBook';
+    font-size: 1vw;
+    line-height: 1.3vw;
     color: #282728;
+    position: relative;
+}
+
+.mainDescriptionItem::before {
+    content: '';
+    width: 0.26vw;
+    height: 1.4vw;
+    background-color: #FE5851;
+    transform: rotate(45deg);
+    position: absolute;
+    left: -0.8vw;
+    top: -0.5vw;
 }
 
 .mainDescriptionItem:not(:first-child) {
-    max-width: 220px;
+    max-width: 11.5vw;
 }
 
 .mainDescriptionItem:first-child {
     align-items: flex-start;
 }
 
-.mainDescriptionItem span {
-    display: block;
-    font-weight: bold;
+.mainDescriptionItem strong {
+    font-family: 'UniNeueBold';
 }
 
 .mainDescriptionItemYear {
-    align-self: flex-start;
-    font-size: 78px;
-    line-height: .9;
+    align-items: flex-start;
+    font-size: 4vw;
+    font-family: 'UniNeueHeavy';
+    line-height: 4vw;
     color: #282728;
-    padding-right: 5px;
+    padding-right: 0.57vw;
 }
 
 .mainAboutAll {
-    margin-top: 60px;
+    margin-top: 2vw;
     display: flex;
+    align-items: flex-end;
 }
 
 .mainAboutCalc {
-    max-width: 450px;
+    max-width: 23.4vw;
 }
 
 .mainAboutCalc img {
-    padding-left: 30px;
-    padding-right: 5px;
+    padding-left: 1.6vw;
     display: block;
+    width: 3vw;
 }
 
 .mainAboutCalc span {
-    border-radius: 5px;
+    display: inline-block;
+    border-radius: 0.26vw;
     background-color: #ffffff;
-    padding: 2px;
+    padding: 0.15vw;
     font-weight: bold;
 }
 
 .mainAboutCalc p {
-    font-size: 18px;
-    line-height: 1.5;
-    padding: 0 20px;
+    font-family: 'UniNeueBook';
+    font-size: 0.95vw;
+    line-height: 1.45vw;
+    padding: 0 1vw;
+}
+
+.mainAboutCalc button::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: -4vw;
+    width: 1.5vw;
+    height: 100%;
+    background-color: white;
+    filter: blur(0.25vw);
+    transform: skewX(-45deg);
+    z-index: 2;
+    animation: blick 4s ease-in-out infinite;
+}
+
+@keyframes blick {
+    0% {
+        left: -12vw;
+    }
+    33% {
+        left: -8vw;
+    }
+    66% {
+        left: -4vw;
+    }
+    100% {
+        left: calc(100% + 4vw);
+    }
 }
 
 .mainAboutCalc button {
+    max-width: 22vw;
+    max-height: 5.2vw;
     display: flex;
     justify-content: center;
     align-items: center;
     align-content: center;
     border: 0;
-    border-bottom: 5px solid #ff352c;
-    border-top: 5px transparent;
+    border-bottom: 0.25vw solid #ff352c;
+    border-top: 0.25vw transparent;
     background: linear-gradient(to bottom, #FE7C55, #FE5C55);
-    border-radius: 5px;
+    border-radius: 0.25vw;
     cursor: pointer;
     transition: .5s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
 }
 
 .mainAboutCalc button:hover {
     border-color: #FE5C55;
-    box-shadow: 2px 0 20px 5px #c7c6c7;
+    box-shadow: 0.1vw 0 1vw 0.25vw #c7c6c7;
     transition: .5s;
 }
 
 .mainAboutCalcTextButton {
     text-transform: uppercase;
-    font-size: 16px;
+    font-family: 'UniNeueBold';
+    font-size: 0.9vw;
+    line-height: 1.25vw;
+    letter-spacing: 0.025em;
     text-align: start;
     color: white;
-    padding-right: 20px;
+    padding-right: 1vw;
 }
 
 .mainAboutLicense {
-    margin-left: 70px;
+    margin-left: 5vw;
+    text-align: center;
+    font-family: 'UniNeueBold';
+    font-size: 0.9vw;
 }
+
+.slider{
+    display: flex;
+}
+
+.slider__arrow {
+    align-self: center;
+    cursor: pointer;
+    visibility: hidden;
+}
+
+.slider__wrapper {
+    margin: 0 1vw;
+    overflow: hidden;
+}
+
+.slider__track {
+    display: flex;
+    transition: .5s;
+}
+
+.slider__item {
+    border: 2px solid #576b83;
+}
+
+.slider__item:not(:last-child) {
+    margin-right: 0.6vw;
+}
+
+.slider__item_img {
+    width: 6vw;
+    cursor: pointer;
+}
+
+.popup {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    z-index: 5;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.6s ease-in-out;
+}
+
+.popup__wrapper {
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.popup__close {
+    position: absolute;
+    top: 1vw;
+    right: 2vw;
+    color: white;
+    font-size: 1.5vw;
+    width: 2.5vw;
+    height: 2vw;
+    border: 1px solid #ffffff;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.popup__content img {
+    max-width: 40vw;
+    max-height: 90vh;
+}
+
+@media (max-width: 767px) {
+    .pageContainer {
+        max-width: 90vw;
+    }
+    .headerTopDescriptionText,
+    .headerTopLocation {
+        display: none;
+    }
+    .headerBurger {
+        display: block;
+    }
+    .headerTopLogoImg {
+        width: 6rem;
+    }
+    .headerTopButton button {
+        width: 100%;
+        height: 100%;
+        font-size: 14px;
+    }
+}
+
